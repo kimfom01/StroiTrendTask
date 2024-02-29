@@ -17,13 +17,4 @@ public class DurationService : Gettable<Duration>, IDurationService
 
         return duration;
     }
-
-    public async Task<Records?> GetRecords()
-    {
-        var duration = await GetData();
-
-        var records = duration?.Records;
-
-        return records;
-    }
 }
