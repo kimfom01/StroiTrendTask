@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\Data\duration.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\Data\ratings.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\Data\response_time.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\Data\tags.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\Data\total_chats.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="StroiTrendTask.Api.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
