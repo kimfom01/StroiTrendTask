@@ -36,9 +36,36 @@ public class DurationController : ControllerBase
 
         if (duration is null)
         {
-            return NotFound("Resource could not be found");
+            return NotFound("Duration could not be found");
         }
 
         return Ok(duration);
+    }
+
+    /// <summary>
+    /// Gets the record data from duration.
+    /// </summary>
+    /// <returns>A json response with record data.</returns>
+    /// <remarks>
+    /// Sample request:
+    /// 
+    ///     GET /api/duration/records
+    ///     
+    /// </remarks>
+    /// <response code="200">Returns a json response with record data</response>
+    /// <response code="404">If the resource could not be found</response>
+    [HttpGet("records")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<Records>> GetRecords()
+    {
+        var records = await _durationService.GetRecords();
+        
+        if (records is null)
+        {
+            return NotFound("Records could not be found");
+        }
+
+        return Ok(records);
     }
 }

@@ -4,4 +4,5 @@ namespace StroiTrendTask.Api.Services;
 
 public interface IDurationService : IGettable<Duration>
 {
+    Task<Records?> GetRecords();
 }

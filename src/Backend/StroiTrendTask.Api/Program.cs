@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Api for Stroi Trend Task",
+        Title = "StroiTrend Task Api",
         Description = "A Web API to fetch data from provided json",
         Contact = new OpenApiContact
         {

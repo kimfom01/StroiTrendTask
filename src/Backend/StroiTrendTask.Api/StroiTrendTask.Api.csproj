@@ -13,14 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\Data\duration.json" />
-    <_ContentIncludedByDefault Remove="wwwroot\Data\ratings.json" />
-    <_ContentIncludedByDefault Remove="wwwroot\Data\response_time.json" />
-    <_ContentIncludedByDefault Remove="wwwroot\Data\tags.json" />
-    <_ContentIncludedByDefault Remove="wwwroot\Data\total_chats.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="StroiTrendTask.Api.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
