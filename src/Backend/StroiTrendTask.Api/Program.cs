@@ -4,6 +4,8 @@ using StroiTrendTask.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+const string corsPolicy = "my origin";
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -31,6 +33,11 @@ builder.Services.AddSwaggerGen(options =>
 });
 builder.Services.AddScoped<IFileLoader, JsonLoader>();
 builder.Services.AddScoped<IDurationService, DurationService>();
+builder.Services.AddCors(policy =>
+{
+    policy.AddPolicy(corsPolicy,
+        policyBuilder => { policyBuilder.WithOrigins("http://localhost:3000").AllowAnyMethod(); });
+});
 
 var app = builder.Build();
 
@@ -38,6 +45,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.UseCors(corsPolicy);
 
 app.UseAuthorization();
 
