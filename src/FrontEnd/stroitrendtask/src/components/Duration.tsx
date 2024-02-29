@@ -28,8 +28,6 @@ export const Duration = () => {
     const { data } = await axios.get<Duration>(`${BaseUrl}/duration`);
 
     setDuration(data);
-    console.table(data?.request);
-    console.table(data?.records);
   };
 
   return (
