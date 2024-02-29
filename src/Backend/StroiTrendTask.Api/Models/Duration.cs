@@ -10,5 +10,5 @@ public class Duration
 
     [JsonPropertyName("total")] public int Total { get; set; }
 
-    [JsonPropertyName("records")] public Records Records { get; set; }
+    [JsonPropertyName("records")] public Dictionary<string, DurationData> Records { get; set; }
 }
