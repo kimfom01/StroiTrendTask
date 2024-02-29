@@ -6,7 +6,7 @@ public class JsonLoader : IFileLoader
 {
     public async Task<T?> LoadFile<T>(string path)
     {
-        var file = File.Open(path, FileMode.Open);
+        await using var file = File.Open(path, FileMode.Open);
 
         var json = await JsonSerializer.DeserializeAsync<T>(file);
 
