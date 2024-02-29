@@ -1,0 +1,28 @@
+.nav-link {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.nav-link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav-link li {
+  float: left;
+}
+
+.nav-link li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-link li a:hover {
+  background-color: #111;
+}
