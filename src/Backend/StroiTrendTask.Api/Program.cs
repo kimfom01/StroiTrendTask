@@ -38,7 +38,7 @@ builder.Services.AddScoped<IRatingService, RatingService>();
 builder.Services.AddCors(policy =>
 {
     policy.AddPolicy(corsPolicy,
-        policyBuilder => { policyBuilder.WithOrigins("http://localhost:3000,https://stroitrendtask-xj4z.onrender.com").AllowAnyMethod(); });
+        policyBuilder => { policyBuilder.WithOrigins("http://localhost:3000", "https://stroitrendtask-xj4z.onrender.com").AllowAnyMethod(); });
 });
 
 var app = builder.Build();
