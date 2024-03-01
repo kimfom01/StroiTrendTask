@@ -1,6 +1,6 @@
 namespace StroiTrendTask.Api.Services;
 
-public interface IGettable<T>
+public interface IGettable<TModel>
 {
-    Task<T?> GetData();
+    Task<TModel?> GetData();
 }

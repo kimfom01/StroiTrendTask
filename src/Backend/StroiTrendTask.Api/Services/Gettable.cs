@@ -1,6 +1,6 @@
 namespace StroiTrendTask.Api.Services;
 
-public abstract class Gettable<T> : IGettable<T>
+public abstract class Gettable<TModel> : IGettable<TModel> where TModel : class
 {
-    public abstract Task<T?> GetData();
+    public abstract Task<TModel?> GetData();
 }
