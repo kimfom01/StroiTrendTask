@@ -74,7 +74,7 @@ export const TotalChats = () => {
   const [chatsReport, setChatsReport] = useState<TotalChatsReport>();
 
   const handleClick = async () => {
-    const { data } = await axios.get<TotalChatsReport>(`${BaseUrl}/duration`);
+    const { data } = await axios.get<TotalChatsReport>(`${BaseUrl}/totalchats`);
 
     setChatsReport(data);
   };
