@@ -19,7 +19,7 @@ jobs:
           dotnet-version: 8.0.x
       
       - name: Move into Backend directory
-      - run: cd src/Backend/
+        run: cd src/Backend/
       
       - name: Restore dependencies
         run: dotnet restore
