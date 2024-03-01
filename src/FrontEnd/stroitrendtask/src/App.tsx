@@ -10,12 +10,13 @@ import { Tags } from "./components/Tags";
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="total-chats" element={<TotalChats />} />
-      <Route path="duration" element={<Duration />} />
-      <Route path="ratings" element={<Ratings />} />
-      <Route path="response-time" element={<ResponseTime />} />
-      <Route path="tags" element={<Tags />} />
+      <Route path="/" element={<Home />}>
+        <Route path="total-chats" element={<TotalChats />} />
+        <Route path="duration" element={<Duration />} />
+        <Route path="ratings" element={<Ratings />} />
+        <Route path="response-time" element={<ResponseTime />} />
+        <Route path="tags" element={<Tags />} />
+      </Route>
     </Routes>
   );
 };
