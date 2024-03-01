@@ -3,7 +3,6 @@ import { Base } from "./Base";
 import { BaseUrl } from "../utils/ApiUrl";
 import axios from "axios";
 import "./Table.css";
-import "./Duration.css";
 import { Request } from "../models/Request";
 
 interface DurationData {
