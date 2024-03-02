@@ -4,6 +4,7 @@ import { BaseUrl } from "../utils/ApiUrl";
 import axios from "axios";
 import "./Table.css";
 import { Request } from "../models/Request";
+import { RequestTable } from "./RequestTable";
 
 interface DurationData {
   agents_chatting_duration: number;
@@ -48,34 +49,6 @@ const Table = ({ records }: Duration) => {
                 );
               }
             )}
-        </tbody>
-      </table>
-    </div>
-  );
-};
-
-const RequestTable = ({ request }: Duration) => {
-  return (
-    <div className="table-root">
-      <table>
-        <thead>
-          <tr>
-            <th>Distribution</th>
-            <th>From</th>
-            <th>To</th>
-          </tr>
-        </thead>
-        <tbody>
-          {request &&
-            Object.entries(request).map(([distribution, { from, to }], key) => {
-              return (
-                <tr key={key}>
-                  <td>{distribution}</td>
-                  <td>{from && new Date(from).toLocaleString()}</td>
-                  <td>{to && new Date(to).toLocaleString()}</td>
-                </tr>
-              );
-            })}
         </tbody>
       </table>
     </div>

@@ -4,6 +4,7 @@ import { Request } from "../models/Request";
 import axios from "axios";
 import "./Table.css";
 import { useState } from "react";
+import { RequestTable } from "./RequestTable";
 
 interface Record {
   [date: string]: { total: number };
@@ -42,33 +43,6 @@ const Table = ({ records }: TotalChatsReport) => {
   );
 };
 
-const RequestTable = ({ request }: TotalChatsReport) => {
-  return (
-    <div className="table-root">
-      <table>
-        <thead>
-          <tr>
-            <th>Distribution</th>
-            <th>From</th>
-            <th>To</th>
-          </tr>
-        </thead>
-        <tbody>
-          {request &&
-            Object.entries(request).map(([distribution, { from, to }], key) => {
-              return (
-                <tr key={key}>
-                  <td>{distribution}</td>
-                  <td>{from && new Date(from).toLocaleString()}</td>
-                  <td>{to && new Date(to).toLocaleString()}</td>
-                </tr>
-              );
-            })}
-        </tbody>
-      </table>
-    </div>
-  );
-};
 
 export const TotalChats = () => {
   const [chatsReport, setChatsReport] = useState<TotalChatsReport>();
