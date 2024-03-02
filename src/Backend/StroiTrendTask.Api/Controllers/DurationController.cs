@@ -30,6 +30,7 @@ public class DurationController : ControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [Produces("application/json")]
     public async Task<ActionResult<Duration>> GetDuration()
     {
         var duration = await _durationService.GetData();

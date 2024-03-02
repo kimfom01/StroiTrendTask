@@ -30,6 +30,7 @@ public class TotalChatsController : ControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [Produces("application/json")]
     public async Task<ActionResult<TotalChats>> GetTotalChats()
     {
         var totalChats = await _totalChatsService.GetData();

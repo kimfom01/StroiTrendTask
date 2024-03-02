@@ -30,6 +30,7 @@ public class ResponseTimeController : ControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [Produces("application/json")]
     public async Task<ActionResult<ResponseTime>> GetResponseTime()
     {
         var responseTime = await _responseTimeService.GetData();

@@ -30,6 +30,7 @@ public class RatingsController : ControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [Produces("application/json")]
     public async Task<ActionResult<Ratings>> GetRatings()
     {
         var ratings = await _ratingService.GetData();
