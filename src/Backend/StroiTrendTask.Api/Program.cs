@@ -35,6 +35,7 @@ builder.Services.AddScoped<IFileLoader, JsonLoader>();
 builder.Services.AddScoped<IDurationService, DurationService>();
 builder.Services.AddScoped<ITotalChatsService, TotalChatsService>();
 builder.Services.AddScoped<IRatingService, RatingService>();
+builder.Services.AddScoped<IResponseTimeService, ResponseTimeService>();
 builder.Services.AddCors(policy =>
 {
     policy.AddPolicy(corsPolicy,
