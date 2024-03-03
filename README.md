@@ -3,6 +3,11 @@
 [Текущая развернутая версия](https://stroitrendtask-xj4z.onrender.com/)  
 [Документация по Swagger API](https://stroitrendtask.onrender.com/swagger/index.html)
 
+## Требования
+
+- .NET 8 SDK
+- Node 20
+
 ## Установка
 
 ### Бэкэнд
